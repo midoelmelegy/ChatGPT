@@ -7,7 +7,6 @@ import RenameIcon from "../icons/rename.svg";
 import ExportIcon from "../icons/share.svg";
 import ReturnIcon from "../icons/return.svg";
 import CopyIcon from "../icons/copy.svg";
-import DownloadIcon from "../icons/download.svg";
 import LoadingIcon from "../icons/three-dots.svg";
 import PromptIcon from "../icons/prompt.svg";
 import MaskIcon from "../icons/mask.svg";
@@ -62,48 +61,11 @@ import { MaskAvatar, MaskConfig } from "./mask";
 import { useMaskStore } from "../store/mask";
 import { useCommand } from "../command";
 import { prettyObject } from "../utils/format";
+import { ExportMessageModal } from "./exporter";
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
 });
-
-function exportMessages(messages: ChatMessage[], topic: string) {
-  const mdText =
-    `# ${topic}\n\n` +
-    messages
-      .map((m) => {
-        return m.role === "user"
-          ? `## ${Locale.Export.MessageFromYou}:\n${m.content}`
-          : `## ${Locale.Export.MessageFromChatGPT}:\n${m.content.trim()}`;
-      })
-      .join("\n\n");
-  const filename = `${topic}.md`;
-
-  showModal({
-    title: Locale.Export.Title,
-    children: (
-      <div className="markdown-body">
-        <pre className={styles["export-content"]}>{mdText}</pre>
-      </div>
-    ),
-    actions: [
-      <IconButton
-        key="copy"
-        icon={<CopyIcon />}
-        bordered
-        text={Locale.Export.Copy}
-        onClick={() => copyToClipboard(mdText)}
-      />,
-      <IconButton
-        key="download"
-        icon={<DownloadIcon />}
-        bordered
-        text={Locale.Export.Download}
-        onClick={() => downloadAs(mdText, filename)}
-      />,
-    ],
-  });
-}
 
 export function SessionConfigModel(props: { onClose: () => void }) {
   const chatStore = useChatStore();
@@ -452,6 +414,8 @@ export function Chat() {
   const config = useAppConfig();
   const fontSize = config.fontSize;
 
+  const [showExport, setShowExport] = useState(false);
+
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [userInput, setUserInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -739,7 +703,7 @@ export function Chat() {
         <div className="window-actions">
           {!isMobileScreen ? (
             <>
-              <div className="window-action-button-ml">
+              <div className={"window-action-button-ml" + " " + styles.mobile}>
                 <IconButton
                   icon={<RenameIcon />}
                   bordered
@@ -752,10 +716,7 @@ export function Chat() {
                   bordered
                   title={Locale.Chat.Actions.Export}
                   onClick={() => {
-                    exportMessages(
-                      session.messages.filter((msg) => !msg.isError),
-                      session.topic,
-                    );
+                    setShowExport(true);
                   }}
                 />
               </div>
@@ -790,10 +751,7 @@ export function Chat() {
                       bordered
                       title={Locale.Chat.Actions.Export}
                       onClick={() => {
-                        exportMessages(
-                          session.messages.filter((msg) => !msg.isError),
-                          session.topic,
-                        );
+                        setShowExport(true);
                       }}
                     />
                   </div>
@@ -967,6 +925,10 @@ export function Chat() {
           />
         </div>
       </div>
+
+      {showExport && (
+        <ExportMessageModal onClose={() => setShowExport(false)} />
+      )}
     </div>
   );
 }
