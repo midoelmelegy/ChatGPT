@@ -107,6 +107,13 @@ function useDragSideBar() {
 export function SideBar(props: { className?: string }) {
   const chatStore = useChatStore();
 
+  // drag side bar
+  const { onDragMouseDown, shouldNarrow } = useDragSideBar();
+  const navigate = useNavigate();
+  const config = useAppConfig();
+
+  useHotKey();
+
   //switch themes
   const theme = config.theme;
   function nextTheme() {
@@ -116,13 +123,6 @@ export function SideBar(props: { className?: string }) {
     const nextTheme = themes[nextIndex];
     config.update((config) => (config.theme = nextTheme));
   }
-
-  // drag side bar
-  const { onDragMouseDown, shouldNarrow } = useDragSideBar();
-  const navigate = useNavigate();
-  const config = useAppConfig();
-
-  useHotKey();
 
   return (
     <div
