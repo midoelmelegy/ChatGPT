@@ -170,7 +170,7 @@ export function SideBar(props: { className?: string }) {
 
       <div className={styles["sidebar-tail"]}>
         <div className={styles["sidebar-actions"]}>
-        <div 
+          <div 
             className={styles["sidebar-action"] + " clickable"}
             onClick={nextTheme}
           >
