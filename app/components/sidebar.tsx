@@ -189,13 +189,17 @@ export function SideBar(props: { className?: string }) {
             className={styles["sidebar-action"] + " clickable"}
             onClick={nextTheme}
           >
+            <IconButton 
+              icon=
             {theme === Theme.Auto ? (
               <AutoIcon />
             ) : theme === Theme.Light ? (
               <LightIcon />
             ) : theme === Theme.Dark ? (
               <DarkIcon />
-            ) : null}
+            ) : null} 
+            shadow 
+            />
           </div>
         </div>
         <div>
