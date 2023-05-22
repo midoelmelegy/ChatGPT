@@ -186,7 +186,7 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div 
-            className={styles["sidebar-action"]} clickable
+            className={styles["sidebar-action"] + " clickable"}
             onClick={nextTheme}
           >
             {theme === Theme.Auto ? (
