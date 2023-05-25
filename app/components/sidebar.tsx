@@ -110,16 +110,6 @@ export function SideBar(props: { className?: string }) {
 
   useHotKey();
 
-  //switch themes
-  const theme = config.theme;
-  function nextTheme() {
-    const themes = [Theme.Auto, Theme.Light, Theme.Dark];
-    const themeIndex = themes.indexOf(theme);
-    const nextIndex = (themeIndex + 1) % themes.length;
-    const nextTheme = themes[nextIndex];
-    config.update((config) => (config.theme = nextTheme));
-  }
-
   return (
     <div
       className={`${styles.sidebar} ${props.className} ${
