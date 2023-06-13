@@ -15,6 +15,8 @@ import dynamic from "next/dynamic";
 import { Path, SlotID } from "../constant";
 import { ErrorBoundary } from "./error";
 
+import { getLang } from "../locales";
+
 import {
   HashRouter as Router,
   Routes,
@@ -129,7 +131,11 @@ function Screen() {
         <>
           <SideBar className={isHome ? styles["sidebar-show"] : ""} />
 
-          <div className={styles["window-content"]} id={SlotID.AppBody}>
+          <div
+            className={`${styles["window-content"]} ${
+              getLang() === "ar" && styles["rtl"]
+            }`} 
+            id={SlotID.AppBody}>
             <Routes>
               <Route path={Path.Home} element={<Chat />} />
               <Route path={Path.NewChat} element={<NewChat />} />
