@@ -11,6 +11,7 @@ import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 
 import Locale from "../locales";
+import { getLang } from "../locales";
 
 import { useAppConfig, useChatStore } from "../store";
 
