@@ -215,10 +215,10 @@ const ar = {
     Revert: "استعادة السياق",
   },
   Plugin: {
-    Name: "插件",
+    Name: "المكون الإضافي",
   },
   Mask: {
-    Name: "المكون الإضافي",
+    Name: "القناع",
     Page: {
       Title: "قناع الشخصية الافتراضي",
       SubTitle: (count: number) => `${count} تعريفات الدور الافتراضي`,
