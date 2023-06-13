@@ -1,6 +1,7 @@
 import CN from "./cn";
 import EN from "./en";
 import TW from "./tw";
+import AR from "./ar";
 import FR from "./fr";
 import ES from "./es";
 import IT from "./it";
@@ -19,6 +20,7 @@ export const AllLangs = [
   "en",
   "cn",
   "tw",
+  "ar",
   "fr",
   "es",
   "it",
@@ -36,6 +38,7 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
   cn: "简体中文",
   en: "English",
   tw: "繁體中文",
+  ar: "العربية",
   fr: "Français",
   es: "Español",
   it: "Italiano",
@@ -102,6 +105,7 @@ const targetLang = {
   en: EN,
   cn: CN,
   tw: TW,
+  ar: AR,
   fr: FR,
   es: ES,
   it: IT,
