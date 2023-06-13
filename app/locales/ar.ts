@@ -1,7 +1,6 @@
 import { SubmitKey } from "../store/config";
-import type { LocaleType } from "./index";
 
-const ar: LocaleType = {
+const ar = {
   WIP: "الميزة لا تزال قيد التطوير...",
   Error: {
     Unauthorized:
