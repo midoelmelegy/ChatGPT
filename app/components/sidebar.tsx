@@ -190,7 +190,9 @@ export function SideBar(props: { className?: string }) {
       </div>
 
       <div
-        className={styles["sidebar-drag"]}
+        className={`${styles["sidebar-drag"]} ${
+          getLang() === "ar" && styles["rtl"]
+        }`}
         onMouseDown={(e) => onDragMouseDown(e as any)}
       ></div>
     </div>
