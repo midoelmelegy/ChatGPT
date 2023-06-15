@@ -760,7 +760,7 @@ export function Chat() {
           </div>
         </div>
         <div className="window-actions">
-          {!isMobileScreen ? (
+          {showMaxIcon ? (
             <>
               <div className={"window-action-button-ml" + " " + styles.mobile}>
                 <IconButton
