@@ -737,6 +737,18 @@ export function Chat() {
     <div className={styles.chat} key={session.id}>
       <div className="window-header" data-tauri-drag-region>
         <div className="window-header-title">
+        {isMobileScreen && (
+          <div className="window-actions">
+            <div className={`window-action-button-mr ${styles["mobile"]}`}>
+              <IconButton
+                icon={<ReturnIcon />}
+                bordered
+                title={Locale.Chat.Actions.ChatList}
+                onClick={() => navigate(Path.Home)}
+              />
+            </div>
+          </div>
+        )}
           <div
             className={`window-header-main-title " ${styles["chat-body-title"]}`}
             onClickCapture={renameSession}
