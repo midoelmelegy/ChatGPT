@@ -1,6 +1,7 @@
 import { SubmitKey } from "../store/config";
+import type { PartialLocaleType } from "./index";
 
-const ar = {
+const ar: PartialLocaleType = {
   WIP: "الميزة لا تزال قيد التطوير...",
   Error: {
     Unauthorized:
