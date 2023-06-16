@@ -735,7 +735,7 @@ export function Chat() {
 
   return (
     <div className={styles.chat} key={session.id}>
-      <div className="window-header">
+      <div className="window-header" data-tauri-drag-region>
         {isMobileScreen && (
           <div className="window-actions">
             <div className={`window-action-button-mr ${styles["mobile"]}`}>
