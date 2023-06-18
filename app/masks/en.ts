@@ -147,6 +147,7 @@ export const EN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
+      frequency_penalty: 0,
       sendMemory: true,
       historyMessageCount: 32,
       compressMessageLengthThreshold: 1000,
