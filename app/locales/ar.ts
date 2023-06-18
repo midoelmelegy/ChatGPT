@@ -189,6 +189,11 @@ const ar: PartialLocaleType = {
       Title: "جدة الموضوع (presence_penalty)",
       SubTitle: "كلما زادت القيمة، زادت احتمالية التوسع إلى مواضيع جديدة",
     },
+    FrequencyPenalty: {
+      Title: "تردد الجزاء",
+      SubTitle:
+        "قيمة أكبر تقلل من احتمالية تكرار نفس السطر",
+    },
   },
   Store: {
     DefaultTopic: "محادثة جديدة",
