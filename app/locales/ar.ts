@@ -276,6 +276,12 @@ const ar: PartialLocaleType = {
     Create: "بناء جديد",
     Edit: "تصحيح",
   },
+  Exporter: {
+    Model: "نموذج",
+    Messages: "الرسائل",
+    Topic: "الموضوع",
+    Time: "الوقت",
+  },
 };
 
 type DeepPartial<T> = T extends object
