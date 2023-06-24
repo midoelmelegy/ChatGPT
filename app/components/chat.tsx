@@ -488,7 +488,7 @@ export function Chat() {
   const navigate = useNavigate();
 
   const onChatBodyScroll = (e: HTMLElement) => {
-    const isTouchBottom = e.scrollTop + e.clientHeight >= e.scrollHeight - 100;
+    const isTouchBottom = e.scrollTop + e.clientHeight >= e.scrollHeight - 10;
     setHitBottom(isTouchBottom);
   };
 
@@ -981,6 +981,9 @@ export function Chat() {
             onBlur={() => setAutoScroll(false)}
             rows={inputRows}
             autoFocus={autoFocus}
+            style={{
+              fontSize: config.fontSize,
+            }}
           />
           <IconButton
             icon={<SendWhiteIcon />}
