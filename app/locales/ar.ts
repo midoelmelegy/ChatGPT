@@ -111,6 +111,12 @@ const ar: PartialLocaleType = {
       Title: "حجم الخط",
       SubTitle: "ضبط حجم الخط لمحتوى الدردشة",
     },
+
+    InputTemplate: {
+      Title: "نموذج الإدخال",
+      SubTitle: "سيتم ملء أحدث رسالة لهذا النموذج",
+    },
+
     Update: {
       Version: (x: string) => `الإصدار الحالي: ${x}`,
       IsLatest: "أنت على أحدث إصدار",
