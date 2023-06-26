@@ -22,7 +22,6 @@ const ALL_LANGS = {
   cn,
   en,
   tw,
-  ar,
   jp,
   ko,
   fr,
