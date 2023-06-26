@@ -1,7 +1,6 @@
 import cn from "./cn";
 import en from "./en";
 import tw from "./tw";
-import ar from "./ar";
 import fr from "./fr";
 import es from "./es";
 import it from "./it";
@@ -46,7 +45,6 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
   cn: "简体中文",
   en: "English",
   tw: "繁體中文",
-  ar: "العربية",
   jp: "日本語",
   ko: "한국어",
   fr: "Français",
