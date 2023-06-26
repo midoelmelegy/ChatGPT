@@ -13,6 +13,7 @@ import ru from "./ru";
 import no from "./no";
 import cs from "./cs";
 import ko from "./ko";
+import ar from "./ar";
 import { merge } from "../utils/merge";
 
 import type { LocaleType } from "./cn";
@@ -34,6 +35,7 @@ const ALL_LANGS = {
   ru,
   cs,
   no,
+  ar,
 };
 
 export type Lang = keyof typeof ALL_LANGS;
@@ -56,6 +58,7 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
   ru: "Русский",
   cs: "Čeština",
   no: "Nynorsk",
+  ar: "العربية",
 };
 
 const LANG_KEY = "lang";

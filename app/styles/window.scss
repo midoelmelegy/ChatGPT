@@ -28,7 +28,10 @@
 
   .window-header-sub-title {
     font-size: 14px;
-    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
   }
 }
 
@@ -36,8 +39,7 @@
   display: inline-flex;
 }
 
-// for settings, preset masks ...
-.window-action-button {
+.window-action-button:not(:first-child) {
   margin-left: 10px;
 }
 
