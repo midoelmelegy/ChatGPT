@@ -60,7 +60,6 @@ import { Prompt, usePromptStore } from "../store/prompt";
 import Locale from "../locales";
 
 import { IconButton } from "./button";
-import styles from "./home.module.scss";
 import styles from "./chat.module.scss";
 
 import { ListItem, Modal, Popover, showModal, showToast } from "./ui-lib";
