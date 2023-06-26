@@ -821,9 +821,10 @@ export function Chat() {
             </div>
           </div>
         )}
-        <div className="window-header-title">
+
+        <div className={`window-header-title ${styles["chat-body-title"]}`}>
           <div
-            className={`window-header-main-title " ${styles["chat-body-title"]}`}
+            className={`window-header-main-title ${styles["chat-body-main-title"]}`}
             onClickCapture={renameSession}
           >
             {!session.topic ? DEFAULT_TOPIC : session.topic}
