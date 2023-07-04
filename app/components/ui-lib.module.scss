@@ -73,7 +73,9 @@
   box-shadow: var(--card-shadow);
   background-color: var(--white);
   border-radius: 12px;
-  width: 60vw;
+  width: 80vw;
+  max-width: 900px;
+  min-width: 300px;
   animation: slide-in ease 0.3s;
 
   --modal-padding: 20px;
@@ -243,7 +245,6 @@
   resize: none;
   outline: none;
   box-sizing: border-box;
-  min-height: 30vh;
 
   &:focus {
     border: 1px solid var(--primary);
