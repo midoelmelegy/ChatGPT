@@ -162,8 +162,8 @@ const en: LocaleType = {
         SubTitle: "Show a mask splash screen before starting new chat",
       },
       Builtin: {
-        Title: "Show Builtin Masks",
-        SubTitle: "Show builtin masks in mask list",
+        Title: "Hide Builtin Masks",
+        SubTitle: "Hide builtin masks in mask list",
       },
     },
     Prompt: {
@@ -300,6 +300,11 @@ const en: LocaleType = {
       HideContext: {
         Title: "Hide Context Prompts",
         SubTitle: "Do not show in-context prompts in chat",
+      },
+      Share: {
+        Title: "Share This Mask",
+        SubTitle: "Generate a link to this mask",
+        Action: "Copy Link",
       },
     },
   },

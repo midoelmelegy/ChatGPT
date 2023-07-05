@@ -161,8 +161,8 @@ const cn = {
         SubTitle: "新建聊天时，展示面具启动页",
       },
       Builtin: {
-        Title: "Show Builtin Masks",
-        SubTitle: "Show builtin masks in mask list",
+        Title: "隐藏内置面具",
+        SubTitle: "在所有面具列表中隐藏内置面具",
       },
     },
     Prompt: {
@@ -296,6 +296,11 @@ const cn = {
       HideContext: {
         Title: "隐藏预设对话",
         SubTitle: "隐藏后预设对话不会出现在聊天界面",
+      },
+      Share: {
+        Title: "分享此面具",
+        SubTitle: "生成此面具的直达链接",
+        Action: "复制链接",
       },
     },
   },
