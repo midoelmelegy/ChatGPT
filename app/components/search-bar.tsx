@@ -18,7 +18,7 @@ import {
   import { Path } from "@/app/constant";
   
   interface SearchResult {
-    sessionId: number;
+    sessionId: string;
     topic: string;
     lastUpdate: number;
     message: ChatMessage[];
