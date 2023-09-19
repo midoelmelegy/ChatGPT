@@ -125,7 +125,6 @@ function useDragSideBar() {
   return {
     onDragStart,
     shouldNarrow,
-    expandSidebar,
   };
 }
 
