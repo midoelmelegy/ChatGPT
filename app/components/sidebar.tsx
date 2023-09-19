@@ -189,7 +189,6 @@ export function SideBar(props: { className?: string }) {
             icon={<SearchIcon />}
             className={styles["sidebar-bar-button"]}
             onClick={() => {
-              expandSidebar();
               // use setTimeout to avoid the input element not ready
               setTimeout(() => {
                 searchBarRef.current?.inputElement?.focus();
