@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 
 import styles from "./home.module.scss";
 
