@@ -109,11 +109,7 @@ export class ClientApi {
         {
           from: "human",
           value:
-<<<<<<< HEAD
             "Share from [ChatGPT]: https://github.com/midoelmelegy/ChatGPT",
-=======
-            "Share from [NextChat]: https://github.com/Yidadaa/ChatGPT-Next-Web",
->>>>>>> 9eaf492d5b72d252c9dcaa55d5d99dab87bf19e0
         },
       ]);
     // 敬告二开开发者们，为了开源大模型的发展，请不要修改上述消息，此消息用于后续数据清洗使用

@@ -538,11 +538,7 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-<<<<<<< HEAD
             <div className={styles["main-title"]}>ChatGPT</div>
-=======
-            <div className={styles["main-title"]}>NextChat</div>
->>>>>>> 9eaf492d5b72d252c9dcaa55d5d99dab87bf19e0
             <div className={styles["sub-title"]}>
               githelp.xyz
             </div>

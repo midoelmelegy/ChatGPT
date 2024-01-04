@@ -10,13 +10,8 @@ import { getServerSideConfig } from "./config/server";
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: "ChatGPT",
   description: "ChatGPT for business.",
-=======
-  title: "NextChat",
-  description: "Your personal ChatGPT Chat Bot.",
->>>>>>> 9eaf492d5b72d252c9dcaa55d5d99dab87bf19e0
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -27,11 +22,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-<<<<<<< HEAD
     title: "ChatGPT",
-=======
-    title: "NextChat",
->>>>>>> 9eaf492d5b72d252c9dcaa55d5d99dab87bf19e0
     statusBarStyle: "default",
   },
 };
